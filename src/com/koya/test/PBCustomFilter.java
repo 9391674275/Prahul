@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 public class PBCustomFilter {
 
 	public static void main(String[] args) throws Exception {
-		String url="http://clientdemo.cloudapp.net/";
+		String url="http://73f03a3c373340a596d220e47e539824.cloudapp.net";
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		
@@ -19,7 +19,7 @@ public class PBCustomFilter {
 		driver.get(url);
 		
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='txtUserName']")).sendKeys("sudhaadmin");
+		driver.findElement(By.xpath(".//*[@id='txtUserName']")).sendKeys("chiruadmin");
 		driver.findElement(By.xpath(".//*[@id='txtPassword']")).sendKeys("123456");
 		driver.findElement(By.xpath(".//*[@id='login-box']/div[1]/div[1]/fieldset/div[3]/label/input")).click();
 		driver.findElement(By.xpath(".//*[@id='btnSubmit']")).click();		
@@ -60,7 +60,7 @@ public class PBCustomFilter {
                  driver.findElement(By.tagName("body")).sendKeys(Keys.DOWN);
         }
 		
-		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("pb51223390_Nw1221");
+		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("90_N13213213221w1221");
 		driver.findElement(By.xpath(".//*[@id='Submit']")).click();
 		Thread.sleep(20000);
 		
@@ -128,7 +128,7 @@ public class PBCustomFilter {
         {
                  driver.findElement(By.tagName("body")).sendKeys(Keys.DOWN);
         }
-		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("pb++02_++__234");
+		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("639874561235844534");
 		driver.findElement(By.xpath(".//*[@id='Submit']")).click();
 		Thread.sleep(20000);
 		
@@ -137,9 +137,9 @@ public class PBCustomFilter {
 		
 		driver.findElement(By.xpath(".//*[@id=' downloadReport1']")).click();
 		Thread.sleep(10000);
-		Robot rbt5=new Robot();
+		/*Robot rbt5=new Robot();
 		rbt5.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		Robot rbt6=new Robot();
 		rbt6.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(5000);
@@ -193,7 +193,7 @@ public class PBCustomFilter {
         {
                  driver.findElement(By.tagName("body")).sendKeys(Keys.DOWN);
         }
-		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("pb++14_++_134");
+		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("pb+-=09814_++_134");
 		driver.findElement(By.xpath(".//*[@id='Submit']")).click();
 		Thread.sleep(20000);
 		
@@ -202,31 +202,16 @@ public class PBCustomFilter {
 		
 		driver.findElement(By.xpath(".//*[@id=' downloadReport1']")).click();
 		Thread.sleep(10000);
-		Robot rbt10=new Robot();
+		/*Robot rbt10=new Robot();
 		rbt10.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		Robot rbt11=new Robot();
 		rbt11.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(10000);
 		
-		driver.findElement(By.xpath(".//*[@id='download41PDF1']")).click();
+		driver.findElement(By.xpath(".//*[@id='downloadReport1']")).click();
 		Thread.sleep(8000);
-		Robot rbt12=new Robot();
-		rbt12.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(5000);
-		
-		driver.findElement(By.xpath(".//*[@id='download113PDF1']")).click();
-		Thread.sleep(5000);
-		Robot rbt13=new Robot();
-		rbt13.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(5000);
-		
-		driver.findElement(By.xpath(".//*[@id='download1113PDF1']")).click();
-		Thread.sleep(5000);
-		Robot rbt14=new Robot();
-		rbt14.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(4000);
-//		driver.close();
+		driver.close();		
 
 	}
 

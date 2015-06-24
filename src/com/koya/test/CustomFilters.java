@@ -2,6 +2,7 @@ package com.koya.test;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,7 +13,10 @@ import org.openqa.selenium.support.ui.Select;
 public class CustomFilters {
 	
 	public static void main(String[] args) throws Exception  {
-		String url="http://clientdemo.cloudapp.net/";
+		Date date = new Date();
+        
+	    System.out.println(date.toString());
+		String url="http://73f03a3c373340a596d220e47e539824.cloudapp.net/";
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		
@@ -60,7 +64,7 @@ public class CustomFilters {
         {
                  driver.findElement(By.tagName("body")).sendKeys(Keys.DOWN);
         }
-		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("p3pp124582323");
+		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("customre"+date.toString());
 		driver.findElement(By.xpath(".//*[@id='Submit']")).click();
 		
 		Thread.sleep(20000);
@@ -70,23 +74,23 @@ public class CustomFilters {
 		driver.findElement(By.xpath(".//*[@id=' downloadReport1']")).click();
 		Thread.sleep(10000);
 		
+		Robot rbt0=new Robot();		
+		rbt0.keyPress(KeyEvent.VK_DOWN);
+		Robot rbt=new Robot();		
+		rbt.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(4000);
 		
-		Robot rbt=new Robot();
-		
-		rbt.keyPress(java.awt.event.KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
-		
-		driver.findElement(By.xpath(".//*[@id='download62PDF1']")).click();
+		/*driver.findElement(By.xpath(".//*[@id='download62PDF1']")).click();
 		Thread.sleep(5000);
 		Robot rbt1=new Robot();
-		rbt1.keyPress(java.awt.event.KeyEvent.VK_ENTER);
+		rbt1.keyPress(KeyEvent.VK_ENTER);
 		
 		driver.findElement(By.xpath(".//*[@id='download63PDF1']")).click();
 		Thread.sleep(5000);
 		
 		Robot rbt2=new Robot();
-		rbt2.keyPress(java.awt.event.KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
+		rbt2.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);*/
 		//========================================================3&4
 		//Backto custom
 		
@@ -107,7 +111,7 @@ public class CustomFilters {
 		{
 		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 		}
-		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("98785658412323");
+		driver.findElement(By.xpath(".//*[@id='tbReportName']")).sendKeys("Custom"+date.toString());
 		driver.findElement(By.xpath(".//*[@id='Submit']")).click();
 		Thread.sleep(20000);
 		driver.findElement(By.xpath(".//*[@id='mybutton']")).click();
@@ -118,19 +122,19 @@ public class CustomFilters {
 		
 		Robot rbt3=new Robot();
 		
-		rbt3.keyPress(java.awt.event.KeyEvent.VK_ENTER);
+		rbt3.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath(".//*[@id='download62PDF1']")).click();
 		Thread.sleep(5000);
 		Robot rbt4=new Robot();
-		rbt4.keyPress(java.awt.event.KeyEvent.VK_ENTER);
+		rbt4.keyPress(KeyEvent.VK_ENTER);
 		
 		driver.findElement(By.xpath(".//*[@id='download63PDF1']")).click();
 		Thread.sleep(5000);
 		
 		Robot rbt5=new Robot();
-		rbt5.keyPress(java.awt.event.KeyEvent.VK_ENTER);
+		rbt5.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
 		
 	}

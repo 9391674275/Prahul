@@ -29,6 +29,31 @@ public class PredefinedRep {
 		Thread.sleep(5000);
 		
 	}
+	public void genPbAgree() throws Exception
+	{
+		System.out.println("Selecting General PB Agreement Information");
+		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_gridSavedReports_linkbutton_0']")).click();
+		Thread.sleep(10000);
+		System.out.println("Selecting Agreements");
+		//Select AgreementStyle
+		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddAgreementStyle']"))).selectByVisibleText("All types");
+		Thread.sleep(4000);
+		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddlClientEntities']"))).selectByVisibleText("All Client Entities");
+		Thread.sleep(4000);
+	}
+	
+	public void scopealllock() throws Exception{
+	System.out.println("Scope Of Lockup(All Provisions)");
+	driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_gridSavedReports_linkbutton_17']")).click();
+	Thread.sleep(10000);
+	System.out.println("Selecting Agreements");
+	//Select AgreementStyle
+	new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddAgreementStyle']"))).selectByVisibleText("All types");
+	Thread.sleep(4000);
+	new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddlClientEntities']"))).selectByVisibleText("All Client Entities");
+	Thread.sleep(4000);
+	}
+	
 
 	
 	public static void Tungt() throws Exception {
@@ -52,15 +77,8 @@ public class PredefinedRep {
 		
 		
 		//===========================General PB Agreement Information==========================================
-		System.out.println("Selecting General PB Agreement Information");
-		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_gridSavedReports_linkbutton_0']")).click();
-		Thread.sleep(10000);
-		System.out.println("Selecting Agreements");
-		//Select AgreementStyle
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddAgreementStyle']"))).selectByVisibleText("All types");
-		Thread.sleep(4000);
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddlClientEntities']"))).selectByVisibleText("All Client Entities");
-		Thread.sleep(4000);
+		PredefinedRep pbagree=new PredefinedRep();
+		pbagree.genPbAgree();
 		//=======================ID's Include==================================================
 		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_cbIdentiDocuments_0']")).click();
 		System.out.println("IDS are Included");
@@ -104,15 +122,8 @@ public class PredefinedRep {
 		prdrep1.RepeatCode();
 			
 		//===========================General PB Agreement Information==========================================
-		System.out.println("Selecting General PB Agreement Information");
-		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_gridSavedReports_linkbutton_0']")).click();
-		Thread.sleep(10000);
-		System.out.println("Selecting Agreements");
-		//Select AgreementStyle
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddAgreementStyle']"))).selectByVisibleText("All types");
-		Thread.sleep(4000);
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddlClientEntities']"))).selectByVisibleText("All Client Entities");
-		Thread.sleep(4000);
+		PredefinedRep pbagree1=new PredefinedRep();
+		pbagree1.genPbAgree();
 		//======================IDS Do Not Include=========================
 		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_cbIdentiDocuments_1']")).click();
 		System.out.println("IDS are not Included");
@@ -158,15 +169,8 @@ public class PredefinedRep {
 		PredefinedRep prdrep2=new PredefinedRep();
 		prdrep2.RepeatCode();
 	  	
-	  	System.out.println("Scope Of Lockup(All Provisions)");
-		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_gridSavedReports_linkbutton_17']")).click();
-		Thread.sleep(10000);
-		System.out.println("Selecting Agreements");
-		//Select AgreementStyle
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddAgreementStyle']"))).selectByVisibleText("All types");
-		Thread.sleep(4000);
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddlClientEntities']"))).selectByVisibleText("All Client Entities");
-		Thread.sleep(4000);
+	  	PredefinedRep scope=new PredefinedRep();
+	  	scope.scopealllock();
 		//=======================ID's Include==================================================
 		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_cbIdentiDocuments_0']")).click();
 		System.out.println("IDS are Included");
@@ -204,15 +208,8 @@ public class PredefinedRep {
 			
 		
 		//============================Scope Of Lockup========================================
-		System.out.println("Scope Of Lockup(All Provisions)");
-		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_gridSavedReports_linkbutton_17']")).click();
-		Thread.sleep(10000);
-		System.out.println("Selecting Agreements");
-		//Select AgreementStyle
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddAgreementStyle']"))).selectByVisibleText("All types");
-		Thread.sleep(4000);
-		new Select(driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_ddlClientEntities']"))).selectByVisibleText("All Client Entities");
-		Thread.sleep(4000);
+	  	PredefinedRep scope1=new PredefinedRep();
+	  	scope1.scopealllock();
 		//=======================ID's Do Not Include==================================================
 				
 		driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_cbIdentiDocuments_1']")).click();
@@ -235,7 +232,7 @@ public class PredefinedRep {
 		
 		driver.findElement(By.xpath(".//*[@id='mybutton']")).click();
 		System.out.println("Click the Excel Report Button");
-		Thread.sleep(10000);
+		Thread.sleep(25000);
 		
 		
 		driver.findElement(By.xpath(".//*[@id='downloadReport']")).click();
