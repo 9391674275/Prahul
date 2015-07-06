@@ -17,10 +17,10 @@ public class BenchMark {
 		driver.get(url);
 		
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='txtUserName']")).sendKeys("sudhaadmin");
-		driver.findElement(By.xpath(".//*[@id='txtPassword']")).sendKeys("123456");
-		driver.findElement(By.xpath(".//*[@id='login-box']/div[1]/div[1]/fieldset/div[3]/label/input")).click();
-		driver.findElement(By.xpath(".//*[@id='btnSubmit']")).click();		
+		driver.findElement(By.cssSelector("input[type='text']")).sendKeys("sivaemployee");
+		driver.findElement(By.cssSelector("input[type='password']")).sendKeys("123456");
+		driver.findElement(By.cssSelector("input[class='ace']")).click();
+		driver.findElement(By.cssSelector("input[type='submit']")).click();
 		Thread.sleep(8000);
 		
 		driver.findElement(By.xpath(".//*[@id='sidebar']/ul/li[3]/a/span")).click();
